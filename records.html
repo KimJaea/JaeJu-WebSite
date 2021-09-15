@@ -23,10 +23,10 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a href="main.html">Project JaeJu</a></li>
-                <li class="sidebar-nav-item"><a href="main.html">Main</a></li>
-                <li class="sidebar-nav-item"><a href="send_file.html">Send File</a></li>
-                <li class="sidebar-nav-item"><a href="map.html">Recommendation</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Records</a></li>
+                <li class="sidebar-nav-item"><a href="main.html">메인 화면</a></li>
+                <li class="sidebar-nav-item"><a href="send_file.html">뇌파 전송</a></li>
+                <li class="sidebar-nav-item"><a href="map.html">병원 찾기</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">기록 확인</a></li>
             </ul>
         </nav>
         <!-- Header-->
@@ -34,114 +34,64 @@
             <div class="container px-4 px-lg-5 text-center">
                 <h1 class="mb-1">Project JaeJu</h1>
                 <h3 class="mb-5"><em>뇌파측정기기와 인공지능을 통한 우울증 측정 서비스</em></h3>
-            </div>
-        </header>
-        <!-- About-->
-        <section class="content-section bg-light" id="about">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-10">
-                        <h2>You Can Check Your Records Here</h2>
-                        <p class="lead mb-5">
-                            EEG, Depression, Emotion, and so on.<br>
-                            <a href="https://www.youtube.com/">Wanna Refresh</a>
-                            ?
-                        </p>
-                        <a class="btn btn-dark btn-xl" href="#services">Records List</a>
-                    </div>
+                <div align="center">
+                    <style>
+                        model-viewer {
+                          width: 800px;
+                          height: 600px;
+                        }
+                    </style>
+                    <model-viewer id="robot" loading="eager" alt="robot model"
+                    camera-controls src="assets/model/RobotExpressive.glb"
+                    animation-name="Walking" autoplay shadow-intensity="3">
+                    </model-viewer>
                 </div>
             </div>
-        </section>
+        </header>
         <!-- Services-->
         <section class="content-section bg-primary text-white text-center" id="services">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">Services</h3>
-                    <h2 class="mb-5">Records List</h2>
+                    <h3 class="text-secondary mb-0">지금까지 측정한 뇌파 데이터를 기반으로 한 우울증 통계</h3>
+                    <h2 class="mb-5">우울증 판단 통계를 확인하세요!</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
-                        <h4><strong>Responsive</strong></h4>
-                        <p class="text-faded mb-0">Looks great on any screen size!</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+                            <div class="center"><img src="assets/img/icon-data.png" width="50" height="50"></div>
+                        </span>
+                        <h4><strong>뇌파 데이터 전송</strong></h4>
+                        <p class="text-faded mb-0">지금까지 총 7번
+                            <br>뇌파 데이터를 전송했습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
-                        <h4><strong>Redesigned</strong></h4>
-                        <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+                            <div class="center"><img src="assets/img/icon-result.png" width="50" height="50"></div>
+                        </span>
+                        <h4><strong>우울증 판단 결과</strong></h4>
+                        <p class="text-faded mb-0">지금까지 총 2번
+                            <br>우울증이라고 판단되었습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
-                        <h4><strong>Favorited</strong></h4>
-                        <p class="text-faded mb-0">
-                            Millions of users
-                            <i class="fas fa-heart"></i>
-                            Start Bootstrap!
-                        </p>
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+                            <div class="center"><img src="assets/img/icon-chat.png" width="50" height="50"></div>
+                        </span>
+                        <h4><strong>챗봇 대화 정신 증상</strong></h4>
+                        <p class="text-faded mb-0">챗봇과 대화한 내용 중
+                            <br>32%가 우울하다고 판단되었습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
-                        <h4><strong>Question</strong></h4>
-                        <p class="text-faded mb-0">I mustache you a question...</p>
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+                            <div class="center"><img src="assets/img/icon-mental.png" width="50" height="50"></div>
+                        </span>
+                        <h4><strong>챗봇 대화 세부 증상</strong></h4>
+                        <p class="text-faded mb-0">우울하다고 판단된 내용 중
+                            <br>50%가 불면증이 있다고 판단했습니다.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Portfolio-->
-        <section class="content-section" id="portfolio">
-            <div class="container px-4 px-lg-5">
-                <div class="content-section-heading text-center">
-                    <h3 class="text-secondary mb-0">Portfolio</h3>
-                    <h2 class="mb-5">Recent Projects</h2>
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Stationary</div>
-                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
-                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Strawberries</div>
-                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
-                        </a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a class="portfolio-item" href="#!">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <div class="h2">Workspace</div>
-                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">

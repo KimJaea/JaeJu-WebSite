@@ -23,10 +23,10 @@
         <nav id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand"><a href="main.html">Project JaeJu</a></li>
-                <li class="sidebar-nav-item"><a href="main.html">Main</a></li>
-                <li class="sidebar-nav-item"><a href="send_file.html">Send File</a></li>
-                <li class="sidebar-nav-item"><a href="#page-top">Recommendation</a></li>
-                <li class="sidebar-nav-item"><a href="records.html">Records</a></li>
+                <li class="sidebar-nav-item"><a href="main.html">메인 화면</a></li>
+                <li class="sidebar-nav-item"><a href="send_file.html">뇌파 전송</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">병원 찾기</a></li>
+                <li class="sidebar-nav-item"><a href="records.html">기록 확인</a></li>
             </ul>
         </nav>
         <!-- Header-->
@@ -34,14 +34,27 @@
             <div class="container px-4 px-lg-5 text-center">
                 <h1 class="mb-1">Project JaeJu</h1>
                 <h3 class="mb-5"><em>뇌파측정기기와 인공지능을 통한 우울증 측정 서비스</em></h3>
+                <div align="center">
+                    <style>
+                        model-viewer {
+                          width: 800px;
+                          height: 600px;
+                        }
+                    </style>
+                    <model-viewer id="robot" loading="eager" alt="robot model"
+                    camera-controls src="assets/model/RobotExpressive.glb"
+                    animation-name="Running" autoplay shadow-intensity="3">
+                    </model-viewer>
+                </div>
             </div>
         </header>
-        <!-- Map-->
+        <!-- Map -->
         <div id="map-canvas" style="width: 100%; height: 600px;"></div>
+        <!-- csv 파일 안의 병원 긁어서 맵에 보여주기 & 리스트로 보여주기 -->
         <!-- info windows-->
         <section class="content-section bg-primary text-white">
             <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">병원 정보 보여주기</h2>
+                <h2 class="mb-4">병원 정보 보여주기(삭제 예정)</h2>
                 <a class="btn btn-xl btn-light me-4" href="#!">병원 홈페이지 확인하기</a>
                 <a class="btn btn-xl btn-dark" href="#!">위치 변경하기</a>
             </div>
@@ -67,6 +80,9 @@
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Google model viewer-->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- Google Map API-->

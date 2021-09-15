@@ -74,13 +74,14 @@ function createMarker(places, map) {
             // console.log(place);
             // console.log(place.rating);
             var contentString = place.name;
-            if(place.rating == 'undefined') {
+            if(place.rating == '') {
                 contentString += '<br>(별점 없음)<br>';
             } else {
                 contentString += '<br>평점: ' + place.rating + '점<br>';
             }
-            //place.vicinity + '<br><br><a href="' +
-            //place.website + '">바로 가기</a>';
+            contentString += "<br>주소: " + place.vicinity + "<br>URL: " + place.url+ "<br>";
+            contentString += '<br><br><a href="' + place.website + '">바로 가기</a>';
+            
             const infowindow = new google.maps.InfoWindow({
                 content: contentString,
             });
