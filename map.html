@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -49,16 +50,16 @@
             </div>
         </header>
         <!-- Map -->
-        <div id="map-canvas" style="width: 100%; height: 600px;"></div>
-        <!-- csv 파일 안의 병원 긁어서 맵에 보여주기 & 리스트로 보여주기 -->
-        <!-- info windows-->
-        <section class="content-section bg-primary text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">병원 정보 보여주기(삭제 예정)</h2>
-                <a class="btn btn-xl btn-light me-4" href="#!">병원 홈페이지 확인하기</a>
-                <a class="btn btn-xl btn-dark" href="#!">위치 변경하기</a>
-            </div>
-        </section>
+        <div id="map-canvas" style="float: left; width: 70%; height: 600px;"></div>
+        <!-- Map Info -->
+        <script src="js/hospital_data.json"></script>
+        <div id="map-info-frame" style="float: left; width: 30%; height: 600px;">
+            <div id="map-info" style="width: 100%; height: 0%; color: white;">현재 위치:</div>
+            <nav>
+                <ul id="list-info"> </ul>
+            </nav>
+        </div>
+        <div style="width: 100%; height: 600px;"><br><br><br></div>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container px-4 px-lg-5">
@@ -88,6 +89,8 @@
         <!-- Google Map API-->
         <script src="js/map.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgvWdfxKIz3jNw_ji2E2pxmU0DDfYonjA&libraries=places&v=weekly&channel=2"async defer></script>
-        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgvWdfxKIz3jNw_ji2E2pxmU0DDfYonjA&callback=initMap&libraries=places&v=weekly&channel=2"async defer></script>-->
+        <!-- Geocoding API -->
+        <script src="https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyAgvWdfxKIz3jNw_ji2E2pxmU0DDfYonjA"></script>
+
     </body>
 </html>
