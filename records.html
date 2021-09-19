@@ -52,8 +52,8 @@
         <section class="content-section bg-primary text-white text-center" id="services">
             <div class="container px-4 px-lg-5">
                 <div class="content-section-heading">
-                    <h3 class="text-secondary mb-0">지금까지 측정한 뇌파 데이터를 기반으로 한 우울증 통계</h3>
-                    <h2 class="mb-5">우울증 판단 통계를 확인하세요!</h2>
+                    <h3 class="text-secondary mb-0" style="font-size: 30px;">뇌파 데이터를 기반으로 한 우울증 통계</h3>
+                    <h2 class="mb-5" style="font-size: 40px;">우울증 판단 통계를 확인하세요!</h2>
                 </div>
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -61,7 +61,7 @@
                             <div class="center"><img src="assets/img/icon-data.png" width="50" height="50"></div>
                         </span>
                         <h4><strong>뇌파 데이터 전송</strong></h4>
-                        <p class="text-faded mb-0">지금까지 총 7번
+                        <p class="text-faded mb-0">지금까지 총 <a id="data1"></a>번
                             <br>뇌파 데이터를 전송했습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -69,7 +69,7 @@
                             <div class="center"><img src="assets/img/icon-result.png" width="50" height="50"></div>
                         </span>
                         <h4><strong>우울증 판단 결과</strong></h4>
-                        <p class="text-faded mb-0">지금까지 총 2번
+                        <p class="text-faded mb-0">지금까지 총 <a id="data2"></a>번
                             <br>우울증이라고 판단되었습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
@@ -78,7 +78,7 @@
                         </span>
                         <h4><strong>챗봇 대화 정신 증상</strong></h4>
                         <p class="text-faded mb-0">챗봇과 대화한 내용 중
-                            <br>32%가 우울하다고 판단되었습니다.</p>
+                            <br><a id="data3"></a>%가 <a id="data4"></a>인 것으로 판단되었습니다.</p>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <span class="service-icon rounded-circle mx-auto mb-3">
@@ -86,8 +86,13 @@
                         </span>
                         <h4><strong>챗봇 대화 세부 증상</strong></h4>
                         <p class="text-faded mb-0">우울하다고 판단된 내용 중
-                            <br>50%가 불면증이 있다고 판단했습니다.</p>
+                            <br><a id="data5"></a>%가 불면증이 있다고 판단했습니다.</p>
                     </div>
+                </div>
+                <div>
+                    <h2><br><br><br>뇌파 분석 결과 그래프<br></h2>
+                    <canvas id="graph" style="background-color: white; padding: 10px;"></canvas>
+                    <canvas id="graph2" style="background-color: white; padding: 10px;"></canvas>
                 </div>
             </div>
         </section>
@@ -113,5 +118,7 @@
         <!-- Google model viewer-->
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+        <!-- Char Source -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     </body>
 </html>

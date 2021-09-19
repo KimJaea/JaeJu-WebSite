@@ -11124,3 +11124,21 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
 }
+
+.service-icon {
+  background-color: #fff;
+  color: #1D809F;
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  line-height: 7.5rem;
+  font-size: 2.25rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+  
+.center {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  padding-bottom: 10%;
+}
