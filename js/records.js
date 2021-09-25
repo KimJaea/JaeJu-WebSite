@@ -7,7 +7,8 @@
 window.onload = function() {
     // Get Record Data
     //var dp = {{ value|tojson }};
-    var data = [[['2021_9_08', 1, 0.9164004780000438],
+    var data = [[['2021_8_08', 1, 0.9164004780000438],
+    ['2021_9_08', 1, 0.9164004780000438],
     ['2021_9_18', 0, 0.9164004780273438],
     ['2021_9_19', 0, 0.9159774780273438]],
     [['depression_insomnia', 'depression_insomnia', 'depression_dazed'],
@@ -16,56 +17,8 @@ window.onload = function() {
     ['depression_lethargy', 'depression_lethargy', 'sadness_upset', 'sadness_upset'],
     ['angry_resentment', 'angry_resentment', 'lonely_meaningless', 'sadness_regret']]]
 
-    // Total Record Count of EEG
     var data_eeg = data[0];
-    const el1 = document.getElementById('data1');
-    el1.innerHTML += data_eeg.length;
-    
-    // Total Depression Count of EEG
-    var data_count = 0;
-    const el2 = document.getElementById('data2');
-    for(let i = 0; i < data_eeg.length; i++) {
-        if(data_eeg[i][1] > 0) {
-            data_count++;
-        }
-    }
-    el2.innerHTML += data_count;
-
-    // Count each result value
-    var count_total = 0;
-    var count1 = 0;
-    var count2 = 0;
     var data_chat = data[1];
-    for(let i = 0; i < data_chat.length; i++) {
-        for(let j = 0; j < data_chat[i].length; j++) {
-            const symptom = data_chat[i][j];
-            count_total++;
-            if(symptom.indexOf('sadness') == 0) {
-                count1++;
-            }
-            if(symptom.indexOf('depression') == 0) {
-                count2++;
-            }
-        }
-    }
-
-    // Chat Bot mental classification
-    const el3 = document.getElementById('data3');
-    const el4 = document.getElementById('data4');
-    if(count1 == 0) {
-        el3.innerHTML += 0;
-    } else {
-        el3.innerHTML += count1/count_total * 100;
-    }
-    el4.innerHTML += "슬픔";
-    
-    // Chat Bot insomnia Percentage
-    const el5 = document.getElementById('data5');
-    if(count2 == 0) {
-        el5.innerHTML += 0;
-    } else {
-        el5.innerHTML += count2/count_total * 100;
-    }
 
     // Set Graph1 Data
     let today = new Date();
