@@ -53,25 +53,30 @@ window.onload = function() {
     }
 
     // Set Graph2 Data
-    var symptomNames_ = [ 'depression', 'sadness', 'lonely', 'angry']
-    var symptomNames_kr = [ '우울증', '슬픔', '외로움', '분노']
+    var symptomNames_ = [ 'depression', 'sadness', 'lonely', 'angry', 'emotionaldysregulation']
+    var symptomNames_kr = [ '우울함', '슬픔', '외로움', '화', '감정 조절 장애']
 
     var symptomDepression_ = ['depression', 'depression_gloomy', 'depression_dazed', 'depression_lethargy', 'depression_desire', 'depression_insomnia',
     'depression_interest', 'depression_appetite', 'depression_confidence', 'depression_loser', 'depression_concentration']
     var symptomSadness_ = ['sadness', 'sadness_upset', 'sadness_tear', 'sadness_cry', 'sadness_guilty', 'sadness_miss', 'sadness_remorse',
     'sadness_sad', 'sadness_miserable', 'sadness_vanity', 'sadness_despair', 'sadness_unfair', 'sadness_regret', 'sadness_disappointment']
     var symptomLonely_ = ['lonely', 'lonely_meaningless', 'lonely_suitability', 'lonely_smolder', 'lonely_hard' ]
-    var symptomAngry_ = ['angry', 'angry_resentment', 'angry_dissatisfaction']
+    var symptomAngry_ = ['angry', 'angry_resentment', 'angry_dissatisfaction', 'angry_hate', 'angry_anger', 'angry_hatred']
+    var symptomEmotionaldysregulation_ = [ 'emotionaldysregulation_paralysis', 'emotionaldysregulation_arbitrariness',
+        'emotionaldysregulation_suppression', 'emotionaldysregulation_conflict']
+
     var symptomDepression_kr = ['우울함', '침울함', '멍함', '무기력', '의욕 없음', '불면증',
     '흥미 없음', '식욕 없음', '자존감 하락', '패배감', '집중력 하락']
     var symptomSadness_kr = ['슬픔', '속상', '눈물', '울음', '죄책감', '그리움', '연민',
     '서러움', '비참함', '허망함', '절망', '억울함', '후회', '서운함']
     var symptomLonely_kr = ['외로움', '무의미', '적적함', '울적', '고단함' ]
-    var symptomAngry_kr = ['분노', '원망', '불만']
+    var symptomAngry_kr = ['화', '원망', '불만', '미움', '분노', '증오']
+    var symptomEmotionaldysregulation_kr = ['감정 마비', '독단', '강압', '갈등']
     var symptomDepression_count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var symptomSadness_count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var symptomLonely_count = [0, 0, 0, 0, 0 ]
-    var symptomAngry_count = [0, 0, 0]
+    var symptomAngry_count = [0, 0, 0, 0, 0, 0]
+    var symptomEmotionaldysregulation_count = [ 0, 0, 0, 0]
 
     for(let i = 0; i < data_chat.length; i++) {
         for(let j = 0; j < data_chat[i].length; j++) {
@@ -96,6 +101,10 @@ window.onload = function() {
                             num = symptomAngry_.indexOf(symptom);
                             symptomAngry_count[num]++;
                             break;
+                        case 4: // 감정 조절 장애
+                            num = symptomEmotionaldysregulation_.indexOf(symptom);
+                            symptomEmotionaldysregulation_count[num]++;
+                            break;
                     }
 
                     break;
@@ -112,11 +121,13 @@ window.onload = function() {
         labels_.push(symptomSadness_kr[i]);
         labels_.push(symptomLonely_kr[i]);
         labels_.push(symptomAngry_kr[i]);
+        labels_.push(symptomEmotionaldysregulation_kr[i])
         labels.push(labels_);
         datas_.push(symptomDepression_count[i]);
         datas_.push(symptomSadness_count[i]);
         datas_.push(symptomLonely_count[i]);
         datas_.push(symptomAngry_count[i]);
+        datas_.push(symptomEmotionaldysregulation_count[i]);
         datas.push(datas_);
     }
     var colors = [];
