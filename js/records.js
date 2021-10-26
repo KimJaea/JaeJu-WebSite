@@ -67,6 +67,7 @@ window.onload = function() {
     var symptomLonely_kr = ['외로움', '무의미', '적적함', '울적', '고단함' ]
     var symptomAngry_kr = ['화', '원망', '불만', '미움', '분노', '증오']
     var symptomEmotionaldysregulation_kr = ['감정 마비', '독단', '강압', '갈등']
+    
     var symptomDepression_count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var symptomSadness_count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     var symptomLonely_count = [0, 0, 0, 0, 0 ]
